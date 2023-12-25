@@ -1,0 +1,38 @@
+{
+    "apiVersion": "apps/v1",
+    "kind": "Deployment",
+    "metadata": {
+      "name": "httpd",
+      "labels": {
+        "app.kubernetes.io/name": "httpd"
+      }
+    },
+    "spec": {
+      "replicas": {{httpd.replicas:-1}},
+      "selector": {
+        "matchLabels": {
+          "app.kubernetes.io/name": "httpd"
+        }
+      },
+      "template": {
+        "metadata": {
+          "labels": {
+            "app.kubernetes.io/name": "httpd"
+          }
+        },
+        "spec": {
+          "containers": [
+            {
+              "name": "httpd",
+              "image": "httpd:2.4.58-alpine3.19",
+              "ports": [
+                {
+                  "containerPort": 80
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }

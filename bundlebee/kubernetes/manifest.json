@@ -1,0 +1,17 @@
+{
+    "$schema": "https://raw.githubusercontent.com/yupiik/bundlebee/gh-pages/generated/jsonschema/manifest.descriptor.json",
+    "interpolateAlveoli": true,
+    "alveoli": [
+      {
+        "name": "httpd",
+        "descriptors": [
+          {
+            "name": "httpd.deployment.json"
+          },
+          {
+            "name": "httpd.service.json"
+          }
+        ]
+      }
+    ]
+  }

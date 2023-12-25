@@ -1,0 +1,4 @@
+= Hello BundleBee
+
+Simple repository with a very simple BundleBee deployment of httpd, goal is mainly to be able to use the git repository with ArgoCD for demo purpose.
+
